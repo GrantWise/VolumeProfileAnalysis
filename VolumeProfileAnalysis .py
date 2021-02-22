@@ -17,7 +17,7 @@ import plotly.graph_objects as go
 
 pio.renderers.default = 'browser'
 
-df = pd.read_json('C:\\Users\\Grant\\Data\link_USDT-1h.json')
+df = pd.read_json('C:\\ \\Data\BTC_USDT-1h.json')
 df.columns = ['date', 'open', 'high', 'low', 'close', 'volume']
 convert_df = pd.to_datetime(df['date'], unit='ms')
 df['date'] = convert_df
@@ -54,7 +54,7 @@ pkx = xr[peaks]
 pky = kdy[peaks]
 
 
-# Find Prominant Peaks. Larger Value identifies larger peaks only, smaller shows more smaller peaks
+# Find Prominant Peaks. Larger value identifies larger peaks only i.e. fewer, smaller value shows more smaller peaks
 min_prom = 0.000005
 peaks, peak_props = signal.find_peaks(kdy, prominence=min_prom)
 pkx = xr[peaks]
